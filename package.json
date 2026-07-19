@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "description": "Intentional vulnerable dependencies for Dependabot testing",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "axios": "0.21.0",
     "jquery": "3.4.0",
     "lodash": "4.17.15",
-    "minimist": "0.0.8"
+    "minimist": "0.0.8",
+    "mysql2": "3.11.3"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.2",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.11.30"
   }
 }
