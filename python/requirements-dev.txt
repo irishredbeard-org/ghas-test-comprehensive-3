@@ -1,0 +1,7 @@
+# Dev/test dependencies only. The intentional CVE pins live in requirements.txt
+# (untouched) — Dependabot still flags Django/Flask/Pillow/requests/urllib3 there.
+# The fixtures only use version-agnostic Flask APIs (`request`, test_request_context),
+# so we install a modern, self-consistent Flask here purely to run the tests. This
+# does NOT change requirements.txt, so the security findings are preserved.
+Flask==3.0.3
+pytest==7.4.4
