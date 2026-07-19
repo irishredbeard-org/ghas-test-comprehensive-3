@@ -60,6 +60,11 @@
   </dependencies>
 
   <build>
+    <!-- The vulnerable fixtures live flat in the java/ folder (not the Maven
+         default src/main/java), so point the main source dir at the module root
+         and compile only the top-level *.java fixtures. Tests stay in the
+         default src/test/java. -->
+    <sourceDirectory>${project.basedir}</sourceDirectory>
     <plugins>
       <!-- Keep the existing Java 11 source level intact. -->
       <plugin>
@@ -69,6 +74,10 @@
         <configuration>
           <source>11</source>
           <target>11</target>
+          <!-- Only the flat fixture files, not src/** (relative to sourceDirectory). -->
+          <includes>
+            <include>*.java</include>
+          </includes>
         </configuration>
       </plugin>
       <!-- Surefire 3.x runs the JUnit 5 (Jupiter) tests. -->
