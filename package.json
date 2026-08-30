@@ -4,7 +4,7 @@
   "private": true,
   "description": "Intentional vulnerable dependencies for Dependabot testing",
   "dependencies": {
-    "axios": "0.21.0",
+    "axios": "1.20.0",
     "jquery": "3.4.0",
     "lodash": "4.17.15",
     "minimist": "0.0.8"
