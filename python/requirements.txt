@@ -1,5 +1,5 @@
 # Intentional vulnerable versions for Dependabot testing in a security test repo
-Django==2.2.24
+Django==6.1.2
 Flask==0.12.2
 Pillow==8.2.0
 requests==2.19.1
